@@ -3,7 +3,7 @@
 ### Build
 
 ```shell
-docker run --rm -it -v `pwd`:/app -w /app pspdev/pspdev make
+make docker-build
 ```
 
 ### Run
