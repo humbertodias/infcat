@@ -23,7 +23,7 @@ OBJS =\
 
 PSP_FW_VERSION = 371
 
-INCDIR = ../../core
+INCDIR = ../../core /usr/include
 CFLAGS = -O6 -G0 -mno-check-zero-division -Wall
 
 CXXFLAGS = $(CFLAGS) -fno-exceptions

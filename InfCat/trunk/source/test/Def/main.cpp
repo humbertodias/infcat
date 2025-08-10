@@ -6,7 +6,7 @@
 using namespace ic;
 
 //! 読み込むファイル名
-#define FILENAME "test.def"
+#define FILENAME "kfm.def"
 
 static const char* tblIndex[] = {
 	"Info", "name",

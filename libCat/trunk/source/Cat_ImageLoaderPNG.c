@@ -104,9 +104,14 @@ Cat_ImageLoaderLoadPNG( Cat_Stream* pStream )
 	// ioをCat_Streamを使うように変更
 	png_set_read_fn( png_ptr, pStream, user_read_data );
 
+	png_uint_32 w, h;
+
 	// 情報を読み込んで、色々と読み込みの設定
 	png_read_info( png_ptr, info_ptr );
-	png_get_IHDR( png_ptr, info_ptr, &nWidth, &nHeight, &bit_depth, &color_type, &interlace_type, NULL, NULL );
+	png_get_IHDR( png_ptr, info_ptr, &w, &h, &bit_depth, &color_type, &interlace_type, NULL, NULL );
+
+	nWidth = (int)w;
+	nHeight = (int)h;
 
 	fNeedUpdate = 0;
 	if(bit_depth == 16) {
